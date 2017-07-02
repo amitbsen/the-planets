@@ -3,69 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>170306 - The Planets </title>
-   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  
-  
-  
-  
+
+
+
+  <!-- SCRIPTS (INCLUDE AFRAME AT TOP OF PROJECT) -->
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene>
-  
-  <a-assets timeout="10000">
-    <img id='milkyWay' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A01%20-%20Milky%20Way.jpg' crossorigin='anonymous'>
-    <img id='earthTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A02%20-%20Earth%20Texture.jpg'>
-    <img id='moonTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A03%20-%20Moon%20Textyre.jpg'>
-    <img id='nextImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A04%20-%20Next.png'>
-    <img id='prevImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A05%20-%20Prev.png'>
-    <img id='mercuryTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A07%20-%20Mercury%20Texture.jpg'/>
-    <img id='venusTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A08%20-%20Venus%20Texture.jpg'/>
-    <img id='marsTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A09%20-%20Mars%20Texture.jpg'/>
-    <img id='jupiterTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP - A10 - Jupiter Texture.jpg'/>
-    <img id='saturnTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A11%20-%20Saturn%20Texture.jpg'/>
-    <img id='uranusTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A12%20-%20Uranus%20Texture.jpg'/>
-    <img id='neptuneTexture' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A13%20-%20Neptune%20Texture.jpg'/>
-    <img id='mercuryTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A14%20-%20Mercury%20Title.png'/>
-    <img id='venusTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A15%20-%20Venus%20Title.png'/>
-    <img id='earthTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A16%20-%20Earth%20Title.png'/>
-    <img id='marsTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A17%20-%20Mars%20Title.png'/>
-    <img id='jupiterTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A18%20-%20Jupiter%20Title.png'/>
-    <img id='saturnTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A19%20-%20Saturn%20Title.png'/>
-    <img id='uranusTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A20%20-%20Uranus%20Title.png'/>
-    <img id='neptuneTitle' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A21%20-%20Neptune%20Title.png'/>
-   <img id='onImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A22%20-%20On.png'/>
-   <img id='offImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A23%20-%20Off.png'/>
-   <img id='accurateSizeImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A24%20-%20Accurate%20Size.png'/>
-   <img id='rotationSpeedImage' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP - A25 - Rotation Speed.png'/>
-    <img id='mercuryDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A26%20-%20Mercury%20Desc.png'/>
-    <img id='venusDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A27%20-%20Venus%20Desc.png'/>
-    <img id='earthDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A28%20-%20Earth%20Desc.png'/>
-    <img id='marsDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A29%20-%20Mars%20Desc.png'/>
-    <img id='jupiterDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A30%20-%20Jupiter%20Desc.png'/>
-    <img id='saturnDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A31%20-%20Saturn%20Desc.png'/>
-    <img id='neptuneDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A32%20-%20Neptune%20Desc.png'/>
-    <img id='uranusDescImg' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A33%20-%20Uranus%20Desc.png'/>
-    <!-- Source for the descriptions: http://www.space.com/16080-solar-system-planets.html -->
-    
-    <img id='saturnRing' crossorigin='anonymous' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/566003/TP%20-%20A34%20-%20Saturn%20Ring.png'/>
-  </a-assets>
- 
-  
-  <!-- SKY --> 
-  <a-sky src='#milkyWay'></a-sky>
-  
-  <!-- CIRCLE PLATFORM -->
-  <a-circle radius='1' position='0 1 0' rotation='270 0 0' material='opacity:.5;' color='#FFF'></a-circle>
-  
-  <!-- CURSOR -->
-  <a-entity camera position='0 1.6 0' rotation='0 0 0' look-controls wasd-controls>
-    
-    <a-entity cursor="fuse: true; fuseTimeout: 500; maxDistance:30"
-              
-              position="0 0 -.3"
-              geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005"
-              material="color: yellow; shader: flat">
+
+    <a-assets timeout="10000">
+
+      <!-- TEXTURES -->
+      <img id='milkyWay' crossorigin='anonymous' src='https://ucarecdn.com/810518dc-4994-4a9c-9175-eee64af19294/' >
+      <img id='earthTexture' crossorigin='anonymous' src='https://ucarecdn.com/02ee3e46-f2bf-4c8b-bf82-ee81e7a89404/'>
+      <img id='moonTexture' crossorigin='anonymous' src='https://ucarecdn.com/4affb117-349d-470f-96b8-4b02c4ee8099/'>
+      <img id='mercuryTexture' crossorigin='anonymous' src='https://ucarecdn.com/790346bb-31ef-4acb-9d78-103733e38cfd/'/>
+      <img id='venusTexture' crossorigin='anonymous' src='https://ucarecdn.com/e3391957-f019-4be5-b18a-02176d4d1130/'/>
+      <img id='marsTexture' crossorigin='anonymous' src='https://ucarecdn.com/cbac4311-8d51-43b1-bc97-aaab53f53c59/'/>
+      <img id='jupiterTexture' crossorigin='anonymous' src='https://ucarecdn.com/3a868f54-1e3e-4ecc-9ba0-a20eb2d42ecd/'/>
+      <img id='saturnTexture' crossorigin='anonymous' src='https://ucarecdn.com/eafb9980-6ff5-4ddc-a7cb-6c7f60dbda95/'/>
+      <img id='uranusTexture' crossorigin='anonymous' src='https://ucarecdn.com/082529f4-582a-4d06-859c-a89d633858fa/'/>
+      <img id='neptuneTexture' crossorigin='anonymous' src=''/>
+      <img id='saturnRing' crossorigin='anonymous' src='https://ucarecdn.com/8b9c35ad-b768-4098-a19c-88ddde8d499d/  '/>
+
+      <!-- DESCRIPTIONS (Source for the descriptions: http://www.space.com/16080-solar-system-planets.html)--> 
+      <img id='earthDescImg' crossorigin='anonymous' src='https://ucarecdn.com/455f9db2-d5c7-4eeb-835c-1ff5a9022bd9/'/>
+      <img id='jupiterDescImg' crossorigin='anonymous' src='https://ucarecdn.com/785c0c59-26fa-476a-83ca-4a4ebfd9301a/'/>
+      <img id='marsDescImg' crossorigin='anonymous' src='https://ucarecdn.com/ce3112b5-a78e-47a9-b8de-513f9be139e1/'/>
+      <img id='mercuryDescImg' crossorigin='anonymous' src='https://ucarecdn.com/f0a68566-9774-4b9e-bf91-d5f740a9e05d/'/>
+      <img id='neptuneDescImg' crossorigin='anonymous' src='https://ucarecdn.com/7be9b971-3e22-4772-b244-51d683b3ac8f/'/>
+      <img id='saturnDescImg' crossorigin='anonymous' src='https://ucarecdn.com/b35dfcf8-ea0f-4bca-be4d-77482bbf09f1/'/>
+      <img id='uranusDescImg' crossorigin='anonymous' src='https://ucarecdn.com/f8349ffb-4398-436c-a088-c11e5dad94ca/'/>
+      <img id='venusDescImg' crossorigin='anonymous' src='https://ucarecdn.com/e62cc9c4-30d9-4b17-9414-6c78f370b6d9/'/>
+
+      <!-- TITLES --> 
+      <img id='accurateSizeImage' crossorigin='anonymous' src='https://ucarecdn.com/5f599ed8-5626-49a1-9c66-ce4788e0fbf3/'/>
+      <img id='earthTitle' crossorigin='anonymous' src='https://ucarecdn.com/80be7377-dba7-4970-afd4-edd29e38ec26/'/>
+      <img id='jupiterTitle' crossorigin='anonymous' src='https://ucarecdn.com/7a6e9dac-898c-4812-ba8a-3632315ab1d3/'/>
+      <img id='marsTitle' crossorigin='anonymous' src='https://ucarecdn.com/3e68c158-8a0d-4cdc-a889-25edac164270/'/>
+      <img id='mercuryTitle' crossorigin='anonymous' src='https://ucarecdn.com/cb18d9fc-592e-48c5-8ea6-93df3fc1f58e/'/>
+      <img id='neptuneTitle' crossorigin='anonymous' src='https://ucarecdn.com/509865e0-8317-4c01-8e03-30c5703cfe39/'/> 
+      <img id='rotationSpeedImage' crossorigin='anonymous' src='https://ucarecdn.com/06f32808-b728-43e1-a850-130196f82b19/'/>
+      <img id='saturnTitle' crossorigin='anonymous' src='https://ucarecdn.com/dad71a3f-089c-452e-b0b5-95d802bc72eb/'/>
+      <img id='uranusTitle' crossorigin='anonymous' src='https://ucarecdn.com/efc297fb-646a-4674-a8ee-7b5cfa5412fc/'/>
+      <img id='venusTitle' crossorigin='anonymous' src='https://ucarecdn.com/1c777831-fbe1-4b51-bf32-fdcbf0435ac1/'/>
+
+      <!-- BTNS -->
+      <img id='nextImage' crossorigin='anonymous' src='https://ucarecdn.com/0c112dd2-97a5-4309-b0b6-7f6e48d7ccaf/'>
+      <img id='offImage' crossorigin='anonymous' src='https://ucarecdn.com/5f8ad637-ed2b-4b67-bc7b-b51d6f851a2f/'/>
+      <img id='onImage' crossorigin='anonymous' src='https://ucarecdn.com/a6cfc99a-c667-4f48-877b-2202a62432a0/'/>
+      <img id='prevImage' crossorigin='anonymous' src='https://ucarecdn.com/5bab1d46-f84a-431d-9a01-69a7212c86c8/'>
+
+    </a-assets>
+
+
+    <!-- SKY --> 
+    <a-sky src='#milkyWay'></a-sky>
+
+    <!-- CIRCLE PLATFORM -->
+    <a-circle radius='1' position='0 1 0' rotation='270 0 0' material='opacity:.5;' color='#FFF'></a-circle>
+
+    <!-- CURSOR -->
+    <a-entity camera position='0 1.6 0' rotation='0 0 0' look-controls wasd-controls>
+
+      <a-entity cursor="fuse: true; fuseTimeout: 500; maxDistance:30"
+
+      position="0 0 -.3"
+      geometry="primitive: ring; radiusInner: 0.003; radiusOuter: 0.005"
+      material="color: yellow; shader: flat">
     </a-entity>
   </a-entity>
   
@@ -73,90 +80,90 @@
   <a-entity id='earth' rotation='0 0 0'>
     <a-sphere id='planetSphere' src='#earthTexture' position='0 1.6 -1' radius='.3'>
      <a-animation class='rotationTransition' attribute='rotation'
-               to='0 360 0'
-               direction='normal'
-               dur='10000'
-               easing='linear'
-               fill='forwards'
-               repeat='indefinite'>
-      </a-animation>
-      
-      <!--<a-animation attribute='color' from='white' to='blue' dur='5000'></a-animation>-->
-      
-      <!--<a-animation attribute='size'></a-animation>-->
-      
+     to='0 360 0'
+     direction='normal'
+     dur='10000'
+     easing='linear'
+     fill='forwards'
+     repeat='indefinite'>
+   </a-animation>
+
+   <!--<a-animation attribute='color' from='white' to='blue' dur='5000'></a-animation>-->
+
+   <!--<a-animation attribute='size'></a-animation>-->
+
+ </a-sphere>
+</a-entity>
+
+<a-ring  id='saturnRings' color='#E5CEDC'position='0 1.6 -1' rotation='-80 0 0' radius-inner='.4' radius-outer='.6' src='#saturnRing' opacity='0'>
+
+</a-ring>
+
+<!-- MOON -->
+<a-entity position='0 1.6 -1' rotation='0 0 20'>
+  <a-entity id='moon'>
+    <a-sphere id='moonSphere' src='#moonTexture' radius='.05395' position='0 0 -.5'>
     </a-sphere>
-  </a-entity>
-  
-    <a-ring  id='saturnRings' color='#E5CEDC'position='0 1.6 -1' rotation='-80 0 0' radius-inner='.4' radius-outer='.6' src='#saturnRing' opacity='0'>
-     
-    </a-ring>
-      
-  <!-- MOON -->
-  <a-entity position='0 1.6 -1' rotation='0 0 20'>
-    <a-entity id='moon'>
-      <a-sphere id='moonSphere' src='#moonTexture' radius='.05395' position='0 0 -.5'>
-      </a-sphere>
-      <a-animation attribute='rotation'
-                 to="0 360 0"
-                 direction='normal'
-                 dur="4000"
-                 easing='linear'
-                 fill="forwards"
-                 repeat="indefinite">
+    <a-animation attribute='rotation'
+    to="0 360 0"
+    direction='normal'
+    dur="4000"
+    easing='linear'
+    fill="forwards"
+    repeat="indefinite">
 
-      </a-animation>
-    </a-entity>
-  </a-entity>
-  
-  
-  <a-sphere radius='.00001' src='#moonTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#marsTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#jupiterTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#saturnTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#neptuneTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#uranusTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#venusTexture'></a-sphere>
-  <a-sphere radius='.00001' src='#mercuryTexture'></a-sphere>
-  
-  
-  
-  <!-- NEXT BUTTON -->
-  <a-curvedimage id='nextButton' src='#nextImage' radius='.4' theta-length='15.22' position='0 1.4 0' height='.04' rotation='0 164 0'>
-  </a-curvedimage>
-  
-  <!-- PREV BUTTON -->
-  <a-curvedimage id='prevButton' src='#prevImage' radius='.4' theta-length='15.22' position='0 1.4 0' height='.04' rotation='0 181 0'>
-  </a-curvedimage>
- 
-  <!-- ACCURATE SIZE TITLE -->
-  <a-curvedimage id='accurateSize' src='#accurateSizeImage' radius='.4001' theta-length='30.45' position='0 1.7 0' height='.08' rotation='0 205 0'></a-curvedimage>
-  <a-curvedimage id='sizeOn' src='#onImage' radius='.4' theta-length='15.22' position='0 1.645 0' height='.04' rotation='0 219 0' color='grey'></a-curvedimage>
-  <a-curvedimage id='sizeOff' src='#offImage' radius='.3999' theta-length='15.22' position='0 1.645 0' height='.04' rotation='0 207 0' ></a-curvedimage>
-  
-  
- 
-  
-  <!-- ROTATION SPEED TITLE -->
-  <a-curvedimage id='rotationSpeed' src='#rotationSpeedImage' radius='.4001' theta-length='30.45' position='0 1.57 0' height='.08' rotation='0 205 0'></a-curvedimage>
-  <a-curvedimage id='rotationOn' src='#onImage' radius='.4' theta-length='15.22' position='0 1.515 0' height='.04' rotation='0 219 0' color='grey'></a-curvedimage>
-  <a-curvedimage id='rotationOff' src='#offImage' radius='.39999' theta-length='15.22' position='0 1.515 0' height='.04' rotation='0 207 0' ></a-curvedimage>
-  
-  
-  
-  <!-- PLANET DESCRIPTION -->
-  <a-curvedimage id='description' src='#earthDescImg' radius='.4' theta-length='64.457' position='0 1.6 0' height='.45' rotation='0 90' ></a-curvedimage>
-  
-  
-  
-  <!-- PLANET TITLE -->
-  <a-curvedimage id='planetTitle' src='#earthTitle' radius ='.4' theta-length='38.067' position='0 1.8 0' height='.1' rotation='0 161 0'></a-curvedImage>
-  
-  
+  </a-animation>
+</a-entity>
+</a-entity>
+
+
+<a-sphere radius='.00001' src='#moonTexture'></a-sphere>
+<a-sphere radius='.00001' src='#marsTexture'></a-sphere>
+<a-sphere radius='.00001' src='#jupiterTexture'></a-sphere>
+<a-sphere radius='.00001' src='#saturnTexture'></a-sphere>
+<a-sphere radius='.00001' src='#neptuneTexture'></a-sphere>
+<a-sphere radius='.00001' src='#uranusTexture'></a-sphere>
+<a-sphere radius='.00001' src='#venusTexture'></a-sphere>
+<a-sphere radius='.00001' src='#mercuryTexture'></a-sphere>
+
+
+
+<!-- NEXT BUTTON -->
+<a-curvedimage id='nextButton' src='#nextImage' radius='.4' theta-length='15.22' position='0 1.4 0' height='.04' rotation='0 164 0'>
+</a-curvedimage>
+
+<!-- PREV BUTTON -->
+<a-curvedimage id='prevButton' src='#prevImage' radius='.4' theta-length='15.22' position='0 1.4 0' height='.04' rotation='0 181 0'>
+</a-curvedimage>
+
+<!-- ACCURATE SIZE TITLE -->
+<a-curvedimage id='accurateSize' src='#accurateSizeImage' radius='.4001' theta-length='30.45' position='0 1.7 0' height='.08' rotation='0 205 0'></a-curvedimage>
+<a-curvedimage id='sizeOn' src='#onImage' radius='.4' theta-length='15.22' position='0 1.645 0' height='.04' rotation='0 219 0' color='grey'></a-curvedimage>
+<a-curvedimage id='sizeOff' src='#offImage' radius='.3999' theta-length='15.22' position='0 1.645 0' height='.04' rotation='0 207 0' ></a-curvedimage>
+
+
+
+
+<!-- ROTATION SPEED TITLE -->
+<a-curvedimage id='rotationSpeed' src='#rotationSpeedImage' radius='.4001' theta-length='30.45' position='0 1.57 0' height='.08' rotation='0 205 0'></a-curvedimage>
+<a-curvedimage id='rotationOn' src='#onImage' radius='.4' theta-length='15.22' position='0 1.515 0' height='.04' rotation='0 219 0' color='grey'></a-curvedimage>
+<a-curvedimage id='rotationOff' src='#offImage' radius='.39999' theta-length='15.22' position='0 1.515 0' height='.04' rotation='0 207 0' ></a-curvedimage>
+
+
+
+<!-- PLANET DESCRIPTION -->
+<a-curvedimage id='description' src='#earthDescImg' radius='.4' theta-length='64.457' position='0 1.6 0' height='.45' rotation='0 90' ></a-curvedimage>
+
+
+
+<!-- PLANET TITLE -->
+<a-curvedimage id='planetTitle' src='#earthTitle' radius ='.4' theta-length='38.067' position='0 1.8 0' height='.1' rotation='0 161 0'></a-curvedImage>
+
+
 </a-scene>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
